@@ -18,13 +18,12 @@ httpClient.interceptors.request.use(config => {
   setGlobalLoading(true)
   const token = window.localStorage.getItem('token')
   if (token) {
-    config.headers.common.Authorizarion = `Bearer ${token}`
+    config.headers.common.Authorization = `Bearer ${token}`
   }
 
   return config
 })
 
-setGlobalLoading(false)
 httpClient.interceptors.response.use((response) => {
   setGlobalLoading(false)
   return response
