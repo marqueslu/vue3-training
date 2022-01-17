@@ -8,7 +8,7 @@
         :class="{
           'bg-gray-200 bg-opacity-50': filter.active,
         }"
-        @click="() => handleSelect"
+        @click="() => handleSelect(filter)"
         class="
           flex
           items-center
@@ -98,6 +98,7 @@ export default {
         return
       }
       state.filters = state.filters.map((filter) => {
+        console.log(filter)
         if (filter.type === type) {
           return { ...filter, active: true }
         }
