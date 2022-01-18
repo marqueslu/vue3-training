@@ -1,6 +1,6 @@
 export function validateEmptyAndLength3 (value) {
   if (!value) {
-    return '* Este campo é obrigatório'
+    return '*Este campo é obrigatório'
   }
 
   if (value.length < 3) {
