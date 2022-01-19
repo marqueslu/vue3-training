@@ -21,7 +21,7 @@
       >
         <div class="flex items-center">
           <span
-            :class="`bg-${filter.color}`"
+            :class="filter.color.bg"
             class="inline-block w-2 h-2 mr-2 rounded-full"
           />{{ filter.label }}
         </div>
@@ -49,10 +49,10 @@ const LABELS = {
 }
 
 const COLORS = {
-  all: 'brand-info',
-  issue: 'brand-danger',
-  idea: 'brand-warning',
-  other: 'brand-graydark'
+  all: { text: 'text-brand-info', bg: 'bg-brand-info' },
+  issue: { text: 'text-brand-danger', bg: 'bg-brand-danger' },
+  idea: { text: 'text-brand-warning', bg: 'bg-brand-warning' },
+  other: { text: 'text-brand-graydark', bg: 'bg-brand-graydark' }
 }
 
 function applyFiltersStructure (summary) {
